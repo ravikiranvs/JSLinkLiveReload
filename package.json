@@ -9,7 +9,7 @@
     "dev": "SET NODE_ENV=development&& webpack --watch",
     "build": "SET NODE_ENV=production&& webpack",
     "lint": "eslint src/**/*.js",
-    "test": "SET NODE_ENV=test&&karma start",
+    "test": "karma start",
     "coverage": "SET NODE_ENV=coverage&&karma start"
   },
   "keywords": [
