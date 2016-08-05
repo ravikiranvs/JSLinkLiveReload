@@ -1,0 +1,59 @@
+{
+  "name": "sp-jslink",
+  "version": "1.0.0",
+  "description": "Sample SharePoint JSLink with Handlebars and Livereload.",
+  "main": "empty",
+  "scripts": {
+    "start": "npm-run-all --parallel dev cdn",
+    "cdn": "http-server CDN -p 7777",
+    "dev": "SET NODE_ENV=development&& webpack --watch",
+    "build": "SET NODE_ENV=production&& webpack",
+    "lint": "eslint src/**/*.js",
+    "test": "SET NODE_ENV=test&&karma start",
+    "coverage": "SET NODE_ENV=coverage&&karma start"
+  },
+  "keywords": [
+    "SharePoint",
+    "JSLink",
+    "Livereload",
+    "Handlebars"
+  ],
+  "author": "Kiran",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "chai-jquery": "^2.0.0",
+    "compression-webpack-plugin": "^0.3.1",
+    "eslint": "^3.2.2",
+    "eslint-config-standard": "^5.3.5",
+    "eslint-plugin-promise": "^2.0.0",
+    "eslint-plugin-react": "^6.0.0",
+    "eslint-plugin-standard": "^2.0.0",
+    "eslint-watch": "^2.1.14",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "fs": "0.0.2",
+    "handlebars-loader": "^1.3.0",
+    "http-server": "^0.9.0",
+    "isparta-loader": "^2.0.0",
+    "jquery": "^3.1.0",
+    "karma": "^1.1.2",
+    "karma-chai-plugins": "^0.7.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-cli": "^1.0.1",
+    "karma-coverage": "^1.1.1",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-mocha": "^1.1.1",
+    "karma-mocha-reporter": "^2.1.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^3.0.1",
+    "npm-run-all": "^2.3.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-livereload-plugin": "^0.8.1"
+  },
+  "dependencies": {
+    "handlebars": "^4.0.5"
+  }
+}
