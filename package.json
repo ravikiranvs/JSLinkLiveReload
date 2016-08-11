@@ -4,9 +4,11 @@
   "description": "Sample SharePoint JSLink with Handlebars and Livereload.",
   "main": "empty",
   "scripts": {
-    "start": "npm-run-all --parallel dev cdn",
-    "cdn": "http-server CDN -p 7777",
-    "dev": "SET NODE_ENV=development&& webpack --watch",
+    "start": "npm-run-all --parallel dev:watch cdn",
+    "cdn": "http-server CDN -p 7777 -c-1",
+    "dev": "SET NODE_ENV=development&& webpack",
+    "dev:watch": "SET NODE_ENV=development&& webpack --watch",
+    "dev:deploy": "spdeployment",
     "build": "SET NODE_ENV=production&& webpack",
     "lint": "eslint src/**/*.js",
     "test": "karma start",
@@ -49,6 +51,7 @@
     "karma-webpack": "^1.7.0",
     "mocha": "^3.0.1",
     "npm-run-all": "^2.3.0",
+    "spdeployment": "^1.2.5",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-livereload-plugin": "^0.8.1"

@@ -1,0 +1,21 @@
+{
+  "DefaultEnvironment": "Dev",
+  "Sites": [
+    {
+      "FastMode": false,
+      "Environment": "Dev",
+      "Name": "JSLinkDeployment",
+      "Url": "http://bharavsp13qa3:9000",
+      "Username": "sp_admin",
+      "Password": "Password123!",
+      "Files": [
+        {
+          "Source": "CDN\\scripts",
+          "Destination": "/Style Library/scripts",
+          "Exclude": "",
+          "Include": ""
+        }
+      ]
+    }
+  ]
+}

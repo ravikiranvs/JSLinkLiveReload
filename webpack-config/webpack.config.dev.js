@@ -30,16 +30,27 @@ var cdnFiles = Object.assign({}, baseConfig, {
 });
 
 
-var loaderFiles = Object.assign({}, baseConfig, {
-  entry: {
-    'persent-column-loader': APP_DIR + '/jslink/persent-column/loader.js'
-  },
-  output: {
-    publicPath: '/',
-    path: BUILD_DIR,
-    filename: '[name].bundle.js'
-  },
-});
+// var loaderFiles = Object.assign({}, baseConfig, {
+//   entry: {
+//     'persent-column-loader': APP_DIR + '/jslink/persent-column/loader.js'
+//   },
+//   output: {
+//     publicPath: '/',
+//     path: CDN_DIR,
+//     filename: '[name].bundle.js'
+//   },
+// });
+
+// var jslinkFiles = Object.assign({}, baseConfig, {
+//   entry: {
+//     'persent-column-jslink': APP_DIR + '/jslink/persent-column/jslink.js'
+//   },
+//   output: {
+//     publicPath: '/',
+//     path: BUILD_DIR,
+//     filename: '[name].bundle.js'
+//   },
+// });
 
 
-module.exports = [cdnFiles, loaderFiles];
+module.exports = [cdnFiles];
