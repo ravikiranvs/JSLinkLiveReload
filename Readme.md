@@ -32,7 +32,7 @@ function renderPercentComplete(ctx) {
 ```
 
 ## Here is how it's going to work
-[Fullscreen](readme/livereload.gif)
+[Fullscreen](https://raw.githubusercontent.com/KiranSrikanta/JSLinkLiveReload/master/readme/livereload.gif)
 ![JSLink with Handlebars and LiveReload in Action](readme/livereload.gif "JSLink with Handlebars and LiveReload in Action")
 
 # Liberaries and Tools
@@ -41,7 +41,7 @@ You may need a slight understanding of the below liberaries and tools:
 * [LiveReload](http://livereload.com/)
 * [Babel](https://babeljs.io/)
 * [webpack](https://webpack.github.io/)
-* [ESLint](http://eslint.org/) [Karma](https://karma-runner.github.io) [Mocha](https://mochajs.org/) [Chai](http://chaijs.com/)
+* [ESLint](http://eslint.org/), [Karma](https://karma-runner.github.io), [Mocha](https://mochajs.org/), [Chai](http://chaijs.com/)
 
 # JSLink Code
 ## The Handlebars Template
