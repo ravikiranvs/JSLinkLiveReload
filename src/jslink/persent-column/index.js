@@ -1,5 +1,6 @@
 import PersentColTemplate from './template.js';
 import {JSLink} from '../../namespace.js';
+import MDS from '../../MDS.js';
 
 JSLink.PersentageColumn = JSLink.PersentageColumn || function () {
   const persentageColumnRender = function (ctx) {
@@ -20,11 +21,4 @@ JSLink.PersentageColumn = JSLink.PersentageColumn || function () {
   SPClientTemplates.TemplateManager.RegisterTemplateOverrides(persentageColumnTemplateOverride);
 };
 
-// eslint-disable-next-line no-undef
-if (typeof _spPageContextInfo != 'undefined' && _spPageContextInfo != null) {
-  // eslint-disable-next-line no-undef
-  RegisterModuleInit(_spPageContextInfo.siteServerRelativeUrl + '/Style%20Library/scripts/persent-column.bundle.js', JSLink.PersentageColumn);
-  JSLink.PersentageColumn();
-} else {
-  JSLink.PersentageColumn();
-}
+MDS('/Style%20Library/scripts/persent-column.bundle.js', JSLink.PersentageColumn);
