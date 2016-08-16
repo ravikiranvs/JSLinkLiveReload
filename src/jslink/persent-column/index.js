@@ -1,41 +1,30 @@
 import PersentColTemplate from './template.js';
 import {JSLink} from '../../namespace.js';
 
-JSLink.PersentageColumn = JSLink.PersentageColumn || {};
+JSLink.PersentageColumn = JSLink.PersentageColumn || function () {
+  const persentageColumnRender = function (ctx) {
+    const persentColTemplate = new PersentColTemplate(window);
+    var fieldVal = ctx.CurrentItem[ctx.CurrentFieldSchema.Name];
+    var percentComplete = fieldVal.toString().replace(' ', '');
+    return persentColTemplate.renderAsString({ value: percentComplete });
+  };
 
-JSLink.PersentageColumn.Functions = JSLink.PersentageColumn.Functions || {};
-JSLink.PersentageColumn.Functions.RenderColumn = JSLink.PersentageColumn.Functions.RenderColumn || function (ctx) {
-  const persentColTemplate = new PersentColTemplate(window);
-  var fieldVal = ctx.CurrentItem[ctx.CurrentFieldSchema.Name];
-  var percentComplete = fieldVal.toString().replace(' ', '');
-  return persentColTemplate.renderAsString({ value: percentComplete });
-};
+  let persentageColumnTemplateOverride = {};
 
-JSLink.PersentageColumn.Template = JSLink.PersentageColumn.Template || {
-  Templates: {
-    Fields: {
-      'PercentComplete': { 'View': JSLink.PersentageColumn.Functions.RenderColumn }
-    }
-  }
-};
-
-JSLink.PersentageColumn.Functions.RenderTemplate = function () {
-  // eslint-disable-next-line no-undef
-  SPClientTemplates.TemplateManager.RegisterTemplateOverrides(JSLink.PersentageColumn.Template);
-};
-
-JSLink.PersentageColumn.Functions.MdsRegisterTemplate = function () {
-  // eslint-disable-next-line no-undef
-  const thisUrl = _spPageContextInfo.siteServerRelativeUrl + 'Site Liberary/persent-column.bundle.js';
-  JSLink.PersentageColumn.Functions.RenderTemplate();
+  persentageColumnTemplateOverride.Templates = {};
+  persentageColumnTemplateOverride.Templates.Fields = {
+    'PercentComplete': { 'View': persentageColumnRender }
+  };
 
   // eslint-disable-next-line no-undef
-  RegisterModuleInit(thisUrl, JSLink.PersentageColumn.Functions.RenderTemplate);
+  SPClientTemplates.TemplateManager.RegisterTemplateOverrides(persentageColumnTemplateOverride);
 };
 
 // eslint-disable-next-line no-undef
 if (typeof _spPageContextInfo != 'undefined' && _spPageContextInfo != null) {
-  JSLink.PersentageColumn.Functions.MdsRegisterTemplate();
+  // eslint-disable-next-line no-undef
+  RegisterModuleInit(_spPageContextInfo.siteServerRelativeUrl + '/Style%20Library/scripts/persent-column.bundle.js', JSLink.PersentageColumn);
+  JSLink.PersentageColumn();
 } else {
-  JSLink.PersentageColumn.Functions.RenderTemplate();
+  JSLink.PersentageColumn();
 }
