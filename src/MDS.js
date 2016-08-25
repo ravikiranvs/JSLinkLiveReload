@@ -1,9 +1,9 @@
 const enableMds = function (scriptRelativeUrl, entryFunc) {
   // eslint-disable-next-line no-undef
-  if (typeof _spPageContextInfo != 'undefined' && _spPageContextInfo != null) {
-    // eslint-disable-next-line no-undef
-    RegisterModuleInit(_spPageContextInfo.siteServerRelativeUrl + scriptRelativeUrl, entryFunc);
+  if (typeof(RegisterModuleInit) == 'function') {
     entryFunc();
+    // eslint-disable-next-line no-undef
+    RegisterModuleInit(scriptRelativeUrl, entryFunc);
   } else {
     entryFunc();
   }

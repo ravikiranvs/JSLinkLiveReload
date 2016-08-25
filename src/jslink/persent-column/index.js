@@ -1,8 +1,7 @@
 import PersentColTemplate from './template.js';
-import {JSLink} from '../../namespace.js';
 import MDS from '../../MDS.js';
 
-JSLink.PersentageColumn = JSLink.PersentageColumn || function () {
+const PersentColumnJSLink = () => {
   const persentageColumnRender = function (ctx) {
     const persentColTemplate = new PersentColTemplate(window);
     var fieldVal = ctx.CurrentItem[ctx.CurrentFieldSchema.Name];
@@ -21,4 +20,4 @@ JSLink.PersentageColumn = JSLink.PersentageColumn || function () {
   SPClientTemplates.TemplateManager.RegisterTemplateOverrides(persentageColumnTemplateOverride);
 };
 
-MDS('/Style%20Library/scripts/persent-column.bundle.js', JSLink.PersentageColumn);
+MDS('/Style%20Library/scripts/persent-column.bundle.js', PersentColumnJSLink);
