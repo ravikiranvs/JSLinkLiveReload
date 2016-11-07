@@ -1,4 +1,4 @@
-# SharePoint JSLink with Handlebars and LiveReload [<img src="https://travis-ci.org/KiranSrikanta/JSLinkLiveReload.svg?branch=master" />](https://travis-ci.org/KiranSrikanta/JSLinkLiveReload)
+# SharePoint JSLink with Handlebars and LiveReload [<img src="https://travis-ci.org/ravikiranvs/JSLinkLiveReload.svg?branch=master" />](https://travis-ci.org/KiranSrikanta/JSLinkLiveReload)
 
 This source code does what is shown in the bellow snippet, but with Handlebars, Unit Testing (yes, even the html) and LiveReload.
 ``` JavaScript
