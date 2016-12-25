@@ -1,4 +1,4 @@
-# SharePoint JSLink with Handlebars and LiveReload [<img src="https://travis-ci.org/ravikiranvs/JSLinkLiveReload.svg?branch=master" />](https://travis-ci.org/KiranSrikanta/JSLinkLiveReload)
+# SharePoint JSLink with Handlebars and LiveReload [<img src="https://travis-ci.org/ravikiranvs/JSLinkLiveReload.svg?branch=master" />](https://travis-ci.org/ravikiranvs/JSLinkLiveReload)
 
 This source code does what is shown in the bellow snippet, but with Handlebars, Unit Testing (yes, even the html) and LiveReload.
 ``` JavaScript
@@ -32,7 +32,7 @@ function renderPercentComplete(ctx) {
 ```
 
 ## Here is how it's going to work
-[Fullscreen](https://raw.githubusercontent.com/KiranSrikanta/JSLinkLiveReload/master/readme/livereload.gif)
+[Fullscreen](https://raw.githubusercontent.com/ravikiranvs/JSLinkLiveReload/master/readme/livereload.gif)
 ![JSLink with Handlebars and LiveReload in Action](readme/livereload.gif "JSLink with Handlebars and LiveReload in Action")
 
 # Liberaries and Tools
